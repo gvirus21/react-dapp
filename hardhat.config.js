@@ -1,3 +1,5 @@
+
+require("dotenv").config()
 require("@nomiclabs/hardhat-waffle");
 
 // eslint-disable-next-line no-undef
@@ -9,6 +11,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   }
 });
 
+const { API_URL, PRIVATE_KEY} = process.env 
+
 module.exports = {
   solidity: "0.8.9",
   paths: {
@@ -18,5 +22,9 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
+    ropsten: {
+      url: API_URL,
+      accounts: [`0x${PRIVATE_KEY}`],
+    }
   },
 };
