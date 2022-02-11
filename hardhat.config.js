@@ -14,7 +14,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const { API_URL, PRIVATE_KEY} = process.env 
 
 module.exports = {
-  solidity: "0.8.9",
+  solidity: "0.8.11",
   paths: {
     artifacts: "./src/artifacts",
   },
