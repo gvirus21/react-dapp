@@ -7,7 +7,7 @@ import Greeter from "./artifacts/contracts/Greeter.sol/Greeter.json";
 const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 function App() {
-  const [greeting, setGreetingValue] = useState();
+  const [greeting, setGreetingValue] = useState("");
 
   const requestAccount = async () => {};
   const fetchGreeting = async () => {
